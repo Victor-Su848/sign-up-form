@@ -201,35 +201,39 @@ header h1 {
     height: 100vh;
     background-color: whitesmoke;
     position: relative;
-    
+
     border-color: whitesmoke;
 }
+
 .form-disclaimer {
-    border:1px solid red;
     display: inline-block;
+    margin-top: 70px;
 }
-.form-disclaimer > p{
+
+.form-disclaimer>p {
     width: 60%;
     font-size: 1.5rem;
     font-weight: 500;
-    border: 1px solid red;
 }
+
 .form-disclaimer p:first-child {
     margin-bottom: 1.5rem;
 }
+
 .italicize {
     font-style: italic;
 }
+
 main {
     display: flex;
-  flex-direction: column;
-  justify-content: center;
+    flex-direction: column;
+    justify-content: center;
 
-  border: 1px solid red;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 100%;
+    border: 1px solid red;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
 }
 
 /*form styles*/
@@ -240,16 +244,10 @@ input {
 }
 
 form {
-    display:flex;
-    flex-direction: column;
-}
-.form-row {
-    display: flex;
-}
-.label-input-pair {
     display: flex;
     flex-direction: column;
 }
+
 form button {
     width: 200px;
     margin: 25px 0;
@@ -261,16 +259,91 @@ form button {
     border-radius: 5px;
     border: none;
 
-    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
-    -webkit-box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.75);
-    -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
 }
-form .white-bg {
+
+.white-bg {
     background-color: #e4e4e4;
     box-shadow: 0px 3px 26px -9px rgba(0, 0, 0, 0.75);
     -webkit-box-shadow: 0px 3px 26px -9px rgba(0, 0, 0, 0.75);
     -moz-box-shadow: 0px 3px 26px -9px rgba(0, 0, 0, 0.75);
+
+    height: 300px;
+    border: 1px solid green;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
 }
+
+.white-bg p {
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.form-row {
+    display: flex;
+}
+
+.label-input-pair {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid red;
+    ;
+    margin-right: 75px;
+}
+
+.label-input-pair label {
+    margin-bottom: .25rem;
+    font-weight: 500;
+}
+
+.label-input-pair input {
+    width: 250px;
+    height: 1.5rem;
+    border-radius: 5px;
+    border-color: grey;
+    border-style: solid;
+    transition: box-shadow .25s;
+}
+
+.label-input-pair input:focus {
+    border-color: #7c98e8;
+    outline: none;
+}
+
+.label-input-pair input:hover,
+.label-input-pair input:focus {
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.25);
+    -webkit-box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.25);
+    -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.25);
+}
+
+input+span {
+    position: relative;
+}
+
+input+span::before {
+    position: absolute;
+    right: 0px;
+    bottom: 33px;
+}
+
+input:valid+span::before {
+    content: '✓';
+    color: green;
+    font-weight: 500;
+}
+input:invalid {
+    border-color: red;
+}
+input:placeholder-shown {
+    border-color: grey;
+}
+
+
 /*end of form styles*/
 
 .log-in-decoration {
@@ -278,11 +351,16 @@ form .white-bg {
     font-weight: bold;
     text-decoration: none;
 }
+
 .right-side p:last-child {
     padding-bottom: 0;
 }
 
 /*left padding for the right-side elements*/
-.right-side > .form-disclaimer, .right-side > p, form > p, form > div, main > p {
+.right-side>.form-disclaimer,
+.right-side>p,
+form>p,
+form>div,
+main>p {
     padding-left: 50px;
 }

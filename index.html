@@ -34,32 +34,38 @@
                     <p>Lets do this!</p>
                     <div class="form-row">
                         <div class="label-input-pair">
-                            <label for="">First Name</label>
-                            <input type="text">
+                            <label for="first-name">First Name</label>
+                            <input type="text" id="first-name" name="firstName" placeholder=" " required>
+                            <span></span>
                         </div>
                         <div class="label-input-pair">
-                            <label for="">Last Name</label>
-                            <input type="text">
-                        </div>
-                    </div>
-                    <div class="form-row">
-                        <div class="label-input-pair">
-                            <label for="">Email</label>
-                            <input type="text">
-                        </div>
-                        <div class="label-input-pair">
-                            <label for="">Phone Number</label>
-                            <input type="text">
+                            <label for="last-name">Last Name</label>
+                            <input type="text" id="last-name" name="lastName" placeholder=" " required>
+                            <span></span>
                         </div>
                     </div>
                     <div class="form-row">
                         <div class="label-input-pair">
-                            <label for="">Password</label>
-                            <input type="text"> </input>
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" placeholder=" " required>
+                            <span></span>
                         </div>
                         <div class="label-input-pair">
-                            <label for="">Confirm Password</label>
-                            <input type="text">
+                            <label for="phone-num">Phone Number</label>
+                            <input type="tel" id="phone-num" name="phoneNum" required placeholder=" " pattern="\d{3}[\-]\d{3}[\-]\d{4}">
+                            <span></span>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="label-input-pair">
+                            <label for="init-pass">Password</label>
+                            <input type="password" id="init-pass" name="initPass" placeholder=" " required>
+                            <span></span>
+                        </div>
+                        <div class="label-input-pair">
+                            <label for="confirm-pass">Confirm Password</label>
+                            <input type="password" id="confirm-pass" name="confirmPass" placeholder=" " required>
+                            <span></span>
                         </div>
                     </div>
                 </div>
