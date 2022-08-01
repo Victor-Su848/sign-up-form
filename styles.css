@@ -331,6 +331,7 @@ input:valid+span::before {
     color: green;
     font-weight: 500;
 }
+
 input:invalid {
     border-color: red;
 }
@@ -338,7 +339,8 @@ input:invalid {
 input:placeholder-shown {
     border-color: grey;
 }
-input[type="password"]:not(:placeholder-shown):invalid + .password-span::before {
+
+input[type="password"]:not(:placeholder-shown):invalid+.password-span::before {
     content: "* Passwords must match";
     color: red;
     font-size: .75rem;
@@ -346,10 +348,7 @@ input[type="password"]:not(:placeholder-shown):invalid + .password-span::before 
     left: 0px;
 }
 
-
-
 /*end of form styles*/
-
 .log-in-decoration {
     color: #2d6392;
     font-weight: bold;
@@ -368,3 +367,91 @@ form>div,
 main>p {
     padding-left: 50px;
 }
+
+@media screen and (max-width: 1024px) {
+    body {
+        flex-direction: column;
+    }
+
+    /*left-side styles*/
+    .left-side {
+        width: 100%;
+        height: 150px;
+    }
+
+    header {
+        margin: 0;
+        background: none;
+    }
+
+    .credits {
+        position: absolute;
+        right: 0;
+    }
+
+    /*right-side styles*/
+    .right-side {
+        width: 100%;
+    }
+
+    .form-disclaimer {
+        margin: 50px 0;
+    }
+
+    .form-disclaimer p {
+        margin: 0 auto;
+        width: 80%;
+    }
+
+    main {
+        position: static;
+        top: none;
+        transform: none;
+    }
+
+    .white-bg p {
+        text-align: center;
+    }
+
+    .form-row {
+        margin: 0 auto;
+        width: 80%;
+        justify-content: space-around;
+        border: 1px solid red;
+    }
+
+    .label-input-pair {
+        margin: 0;
+    }
+
+    form button {
+        width: 200px;
+        height: 50px;
+        margin: 50px auto;
+    }
+    main p:last-child {
+        text-align: center;
+    }
+
+
+    .right-side>.form-disclaimer,
+    .right-side>p,
+    form>p,
+    form>div,
+    main>p {
+        padding-left: 0px;
+    }
+}
+@media screen and (max-width: 425px) {
+    .form-row {
+        width: 100%;
+    }
+    .label-input-pair {
+        width: 40%;
+    }    
+    .label-input-pair input {
+        width: 100%;
+        height: 1.5rem;
+    }
+}
+    
